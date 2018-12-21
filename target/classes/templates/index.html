@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>首页</title>
+    <link href="/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="/css/easyui.css?4.1.0" rel="stylesheet">
+    <script src="/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/js/bootstrap-table.min.js"></script>
+    <script src="/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="/js/bootstrap-paginator.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-body" style="text-align: center">
+                    <div  id="exampleToolbar" role="group" >
+                        <div class="panelTree">
+                            <div class="ibox ibox-body iboxTree">
+                                    <div class="searchTree">
+                                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 isOnline">
+                                            <div class="form-group">
+                                                <label class="col-xs-2 col-sm-2 control-label">表名：</label>
+                                                <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+                                                    <select data-placeholder="--选择生成的表名--" name="tableName" id="tableName"
+                                                            class="form-control input-xs chosen-select" tabindex="2">
+                                                        <option value="">--选择生成的表名--</option>
+                                                        <option value="student" selected="selected">学生表</option>
+                                                        <option value="goods">商品表</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a id="searchBtn" class="btn btn-sm blue">生成表格</a>
+                                    <div id="jstree">
+                                        <table id="exampleTable" data-mobile-responsive="true">
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/index.js"></script>
+</body>
+
+</html>

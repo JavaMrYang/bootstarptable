@@ -1,0 +1,16 @@
+.my-container {
+    display: inline-block;
+    margin-right:30px;
+}
+
+.myLabel-content ,.myText-content,.myBtn-content{
+    display: inline-block;
+    margin-left: 10px;
+}
+.myLabel-content,.myText-content input[type='text'],.myBtn-content .btn {
+    height: 30px;
+    font-size: 12px;
+}
+.myBtn-content .btn {
+    margin-bottom: 10px;
+}

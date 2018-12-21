@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示表格</title>
+    <link href="/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="/css/easyui.css?4.1.0" rel="stylesheet">
+    <link href="/css/show-table.css" rel="stylesheet">
+    <script src="/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/js/bootstrap-table.min.js"></script>
+    <script src="/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="/js/bootstrap-paginator.min.js"></script>
+
+</head>
+<body>
+<div id="toolbar" style="text-align: center">
+    <form id="search-text" class="form-horizontal" style="max-width: 60%;margin: 0 auto"></form>
+    <div id="tableDiv">
+        <div  class="form-group inline">
+            <div class="my-container">
+                <label class="myLabel-content">表名：</label>
+                <div class="myText-content">
+                    <select data-placeholder="--选择生成的表名--" name="tableName" id="tableName"
+                            class="form-control input-xs chosen-select" tabindex="2">
+                        <option value="">--请选择生成的表名--</option>
+                        <option value="student" selected="selected">学生表</option>
+                        <option value="goods">商品表</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="myBtn-content">
+            <button id="search" type="button" class="btn btn-primary">搜索</button>
+            <button id="reset" type="button" class="btn btn-default blue">重置</button>
+        </div>
+    </div>
+</div>
+<div id="table-container" style="max-width: 80%;margin: 0 auto">
+    <table class="table table-bordered"  id="showTable"></table>
+</div>
+
+</body>
+<script src="/js/show-table.js"></script>
+</html>
