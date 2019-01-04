@@ -1,0 +1,16 @@
+redis:
+  server:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 5000
+    maxIdle: 50
+    maxWaitMills: 5000
+    maxTotal: 500
+
+#自定义配置属性
+com:
+  didispace:
+    blog:
+      name: 程序猿DD
+      title: springboot teach

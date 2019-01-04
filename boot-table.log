@@ -1,0 +1,942 @@
+2018-12-29 10:55:44.962  INFO 17068 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 17068 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2018-12-29 10:55:44.964 DEBUG 17068 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2018-12-29 10:55:44.965  INFO 17068 --- [main] com.tcloudata.MainApplication            : No active profile set, falling back to default profiles: default
+2018-12-29 10:55:45.284  INFO 17068 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b8b43c7: startup date [Sat Dec 29 10:55:45 CST 2018]; root of context hierarchy
+2018-12-29 10:55:46.805  INFO 17068 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2018-12-29 10:55:46.814  INFO 17068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-29 10:55:46.815  INFO 17068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-29 10:55:46.904  INFO 17068 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-29 10:55:46.904  INFO 17068 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1630 ms
+2018-12-29 10:55:47.068  INFO 17068 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-29 10:55:47.073  INFO 17068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-29 10:55:47.073  INFO 17068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-29 10:55:47.073  INFO 17068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-29 10:55:47.074  INFO 17068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-29 10:55:47.709  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b8b43c7: startup date [Sat Dec 29 10:55:45 CST 2018]; root of context hierarchy
+2018-12-29 10:55:47.774  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2018-12-29 10:55:47.775  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2018-12-29 10:55:47.775  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2018-12-29 10:55:47.776  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-12-29 10:55:47.777  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-12-29 10:55:47.779  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-29 10:55:47.780  INFO 17068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-29 10:55:47.809  INFO 17068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 10:55:47.810  INFO 17068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 10:55:47.849  INFO 17068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-29 10:55:48.516  INFO 17068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-29 10:55:48.518  INFO 17068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-29 10:55:48.524  INFO 17068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-29 10:55:48.594  INFO 17068 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2018-12-29 10:55:48.598  INFO 17068 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 4.087 seconds (JVM running for 5.344)
+2019-01-04 10:06:05.823  INFO 1368 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 1368 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 10:06:05.824  INFO 1368 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 10:06:06.097  INFO 1368 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6c1a5b54: startup date [Fri Jan 04 10:06:06 CST 2019]; root of context hierarchy
+2019-01-04 10:06:07.763  INFO 1368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 10:06:09.160  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6c1a5b54: startup date [Fri Jan 04 10:06:06 CST 2019]; root of context hierarchy
+2019-01-04 10:06:09.229  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 10:06:09.230  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 10:06:09.230  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 10:06:09.231  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:06:09.231  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:06:09.234  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 10:06:09.234  INFO 1368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 10:06:09.265  INFO 1368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:09.265  INFO 1368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:09.302  INFO 1368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:10.121  INFO 1368 --- [main] ApplicationTest                          : Started ApplicationTest in 4.807 seconds (JVM running for 5.742)
+2019-01-04 10:06:10.177  INFO 1368 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6c1a5b54: startup date [Fri Jan 04 10:06:06 CST 2019]; root of context hierarchy
+2019-01-04 10:06:54.842  INFO 1444 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 1444 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 10:06:54.843  INFO 1444 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 10:06:55.090  INFO 1444 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:06:55 CST 2019]; root of context hierarchy
+2019-01-04 10:06:56.250  INFO 1444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 10:06:57.622  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:06:55 CST 2019]; root of context hierarchy
+2019-01-04 10:06:57.688  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 10:06:57.689  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 10:06:57.689  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 10:06:57.690  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:06:57.690  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:06:57.693  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 10:06:57.693  INFO 1444 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 10:06:57.720  INFO 1444 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:57.720  INFO 1444 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:57.755  INFO 1444 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:06:58.559  INFO 1444 --- [main] ApplicationTest                          : Started ApplicationTest in 4.153 seconds (JVM running for 5.18)
+2019-01-04 10:06:58.608  INFO 1444 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:06:55 CST 2019]; root of context hierarchy
+2019-01-04 10:08:27.331  INFO 480 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 480 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 10:08:27.332  INFO 480 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 10:08:27.559  INFO 480 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:08:27 CST 2019]; root of context hierarchy
+2019-01-04 10:08:28.937  INFO 480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 10:08:30.766  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:08:27 CST 2019]; root of context hierarchy
+2019-01-04 10:08:30.846  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 10:08:30.847  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 10:08:30.847  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 10:08:30.848  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:08:30.848  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 10:08:30.851  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 10:08:30.851  INFO 480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 10:08:30.899  INFO 480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:08:30.900  INFO 480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:08:30.940  INFO 480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 10:08:31.759  INFO 480 --- [main] ApplicationTest                          : Started ApplicationTest in 4.856 seconds (JVM running for 5.755)
+2019-01-04 10:08:31.819 ERROR 480 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1fc2b765] to prepare test instance [ApplicationTest@314b9e4b]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ApplicationTest': Unsatisfied dependency expressed through field 'jedisProperties'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tcloudata.properties.JedisProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:386) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tcloudata.properties.JedisProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1493) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 28 common frames omitted
+
+2019-01-04 10:08:31.835  INFO 480 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1c7696c6: startup date [Fri Jan 04 10:08:27 CST 2019]; root of context hierarchy
+2019-01-04 11:00:53.611  INFO 12040 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 12040 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:00:53.612  INFO 12040 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:00:53.900  INFO 12040 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:00:53 CST 2019]; root of context hierarchy
+2019-01-04 11:00:55.222  INFO 12040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:00:57.007  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:00:53 CST 2019]; root of context hierarchy
+2019-01-04 11:00:57.076  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:00:57.077  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:00:57.078  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:00:57.079  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:00:57.079  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:00:57.081  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:00:57.082  INFO 12040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:00:57.109  INFO 12040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:00:57.109  INFO 12040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:00:57.146  INFO 12040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:00:58.038  INFO 12040 --- [main] ApplicationTest                          : Started ApplicationTest in 4.896 seconds (JVM running for 5.956)
+2019-01-04 11:00:58.081  INFO 12040 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:00:53 CST 2019]; root of context hierarchy
+2019-01-04 11:01:12.338  INFO 7108 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 7108 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:01:12.341  INFO 7108 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:01:12.757  INFO 7108 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:12 CST 2019]; root of context hierarchy
+2019-01-04 11:01:14.074  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:01:15.915  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:12 CST 2019]; root of context hierarchy
+2019-01-04 11:01:16.010  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:01:16.011  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:01:16.011  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:01:16.012  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:01:16.012  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:01:16.015  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:01:16.015  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:01:16.053  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:16.053  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:16.103  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:17.247  INFO 7108 --- [main] ApplicationTest                          : Started ApplicationTest in 5.452 seconds (JVM running for 6.682)
+2019-01-04 11:01:43.568  INFO 11740 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 11740 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:01:43.575  INFO 11740 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:01:43.942  INFO 11740 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:01:43 CST 2019]; root of context hierarchy
+2019-01-04 11:01:45.690  INFO 11740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:01:47.655  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:01:43 CST 2019]; root of context hierarchy
+2019-01-04 11:01:47.750  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:01:47.754  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:01:47.754  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:01:47.755  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:01:47.756  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:01:47.759  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:01:47.760  INFO 11740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:01:47.805  INFO 11740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:47.805  INFO 11740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:47.879  INFO 11740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:01:49.295  INFO 11740 --- [main] ApplicationTest                          : Started ApplicationTest in 6.293 seconds (JVM running for 7.671)
+2019-01-04 11:01:49.396  INFO 11740 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:01:43 CST 2019]; root of context hierarchy
+2019-01-04 11:01:57.934  INFO 11936 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 11936 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:01:57.936  INFO 11936 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:01:58.252  INFO 11936 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:58 CST 2019]; root of context hierarchy
+2019-01-04 11:02:00.064  INFO 11936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:02:01.839  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:58 CST 2019]; root of context hierarchy
+2019-01-04 11:02:01.949  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:02:01.951  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:02:01.952  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:02:01.952  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:02:01.953  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:02:01.956  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:02:01.956  INFO 11936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:02:01.995  INFO 11936 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:01.995  INFO 11936 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:02.047  INFO 11936 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:03.293  INFO 11936 --- [main] ApplicationTest                          : Started ApplicationTest in 6.218 seconds (JVM running for 7.226)
+2019-01-04 11:02:03.404  INFO 11936 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:58 CST 2019]; root of context hierarchy
+2019-01-04 11:02:35.662  INFO 7952 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 7952 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:02:35.663  INFO 7952 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:02:35.969  INFO 7952 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:02:35 CST 2019]; root of context hierarchy
+2019-01-04 11:02:37.702  INFO 7952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:02:39.664  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:02:35 CST 2019]; root of context hierarchy
+2019-01-04 11:02:39.752  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:02:39.753  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:02:39.753  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:02:39.754  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:02:39.755  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:02:39.758  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:02:39.759  INFO 7952 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:02:39.794  INFO 7952 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:39.794  INFO 7952 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:39.843  INFO 7952 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:02:41.121  INFO 7952 --- [main] ApplicationTest                          : Started ApplicationTest in 6.336 seconds (JVM running for 7.355)
+2019-01-04 11:02:41.190  INFO 7952 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:02:35 CST 2019]; root of context hierarchy
+2019-01-04 11:05:03.094  INFO 5112 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 5112 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:05:03.095  INFO 5112 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:05:03.676  INFO 5112 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:05:03 CST 2019]; root of context hierarchy
+2019-01-04 11:05:05.752  INFO 5112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:05:07.550  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:05:03 CST 2019]; root of context hierarchy
+2019-01-04 11:05:07.643  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:05:07.644  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:05:07.645  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:05:07.646  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:05:07.646  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:05:07.649  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:05:07.649  INFO 5112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:05:07.686  INFO 5112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:07.686  INFO 5112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:07.735  INFO 5112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:08.911  INFO 5112 --- [main] ApplicationTest                          : Started ApplicationTest in 6.621 seconds (JVM running for 7.596)
+2019-01-04 11:05:19.058  INFO 7108 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:01:12 CST 2019]; root of context hierarchy
+2019-01-04 11:05:53.418  INFO 424 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 424 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:05:53.419  INFO 424 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:05:53.733  INFO 424 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:05:53 CST 2019]; root of context hierarchy
+2019-01-04 11:05:55.181  INFO 424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:05:57.132  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:05:53 CST 2019]; root of context hierarchy
+2019-01-04 11:05:57.212  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:05:57.213  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:05:57.214  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:05:57.215  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:05:57.215  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:05:57.221  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:05:57.223  INFO 424 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:05:57.280  INFO 424 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:57.281  INFO 424 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:57.372  INFO 424 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:05:59.637  INFO 424 --- [main] ApplicationTest                          : Started ApplicationTest in 6.786 seconds (JVM running for 7.963)
+2019-01-04 11:06:12.120  INFO 424 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:05:53 CST 2019]; root of context hierarchy
+2019-01-04 11:07:00.515  INFO 6912 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 6912 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:07:00.516  INFO 6912 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:07:00.814  INFO 6912 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:07:00 CST 2019]; root of context hierarchy
+2019-01-04 11:07:02.453  INFO 6912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:07:04.990  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:07:00 CST 2019]; root of context hierarchy
+2019-01-04 11:07:05.127  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:07:05.129  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:07:05.130  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:07:05.131  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:05.132  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:05.136  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:07:05.136  INFO 6912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:07:05.255  INFO 6912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:05.255  INFO 6912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:05.346  INFO 6912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:06.803  INFO 2540 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 2540 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:07:06.804  INFO 2540 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:07:07.158  INFO 6912 --- [main] ApplicationTest                          : Started ApplicationTest in 7.119 seconds (JVM running for 7.906)
+2019-01-04 11:07:07.332  INFO 6912 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:07:00 CST 2019]; root of context hierarchy
+2019-01-04 11:07:07.470  INFO 2540 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b3a45f1: startup date [Fri Jan 04 11:07:07 CST 2019]; root of context hierarchy
+2019-01-04 11:07:09.154  INFO 2540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:07:11.581  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b3a45f1: startup date [Fri Jan 04 11:07:07 CST 2019]; root of context hierarchy
+2019-01-04 11:07:11.666  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:07:11.667  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:07:11.667  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:07:11.668  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:11.668  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:11.671  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:07:11.672  INFO 2540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:07:11.707  INFO 2540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:11.707  INFO 2540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:11.757  INFO 2540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:12.870  INFO 2540 --- [main] ApplicationTest                          : Started ApplicationTest in 7.209 seconds (JVM running for 9.565)
+2019-01-04 11:07:12.936  INFO 2540 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4b3a45f1: startup date [Fri Jan 04 11:07:07 CST 2019]; root of context hierarchy
+2019-01-04 11:07:25.834  INFO 12816 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 12816 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:07:25.835  INFO 12816 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:07:26.225  INFO 12816 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:07:26 CST 2019]; root of context hierarchy
+2019-01-04 11:07:28.025  INFO 12816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:07:29.700  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:07:26 CST 2019]; root of context hierarchy
+2019-01-04 11:07:29.792  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:07:29.793  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:07:29.794  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:07:29.794  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:29.795  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:07:29.797  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:07:29.798  INFO 12816 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:07:29.833  INFO 12816 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:29.833  INFO 12816 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:29.881  INFO 12816 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:07:31.076  INFO 12816 --- [main] ApplicationTest                          : Started ApplicationTest in 5.933 seconds (JVM running for 7.118)
+2019-01-04 11:08:11.838  INFO 12816 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3542162a: startup date [Fri Jan 04 11:07:26 CST 2019]; root of context hierarchy
+2019-01-04 11:10:04.906  INFO 6632 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 6632 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:10:04.906  INFO 6632 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:10:05.530  INFO 6632 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:05 CST 2019]; root of context hierarchy
+2019-01-04 11:10:06.488  INFO 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:10:09.175  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:05 CST 2019]; root of context hierarchy
+2019-01-04 11:10:09.392  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:10:09.393  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:10:09.393  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:10:09.395  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:09.395  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:09.398  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:10:09.398  INFO 6632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:10:09.464  INFO 6632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:09.465  INFO 6632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:09.577  INFO 6632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:11.482  INFO 12580 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 12580 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:10:11.483  INFO 12580 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:10:11.508  INFO 6632 --- [main] ApplicationTest                          : Started ApplicationTest in 7.034 seconds (JVM running for 7.857)
+2019-01-04 11:10:11.781  INFO 6632 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:05 CST 2019]; root of context hierarchy
+2019-01-04 11:10:11.960  INFO 12580 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:11 CST 2019]; root of context hierarchy
+2019-01-04 11:10:13.913  INFO 12580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:10:15.919  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:11 CST 2019]; root of context hierarchy
+2019-01-04 11:10:16.012  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:10:16.013  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:10:16.014  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:10:16.015  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:16.016  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:16.020  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:10:16.022  INFO 12580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:10:16.060  INFO 12580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:16.060  INFO 12580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:16.112  INFO 12580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:17.259  INFO 12580 --- [main] ApplicationTest                          : Started ApplicationTest in 6.939 seconds (JVM running for 9.659)
+2019-01-04 11:10:17.336  INFO 12580 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:11 CST 2019]; root of context hierarchy
+2019-01-04 11:10:47.014  INFO 6904 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 6904 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:10:47.014  INFO 6904 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:10:47.257  INFO 6904 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:47 CST 2019]; root of context hierarchy
+2019-01-04 11:10:48.888  INFO 6904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:10:51.698  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:47 CST 2019]; root of context hierarchy
+2019-01-04 11:10:52.005  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:10:52.006  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:10:52.007  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:10:52.007  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:52.008  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:52.010  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:10:52.010  INFO 6904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:10:52.064  INFO 6904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:52.064  INFO 6904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:52.273  INFO 6904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:52.422  INFO 13264 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 13264 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:10:52.422  INFO 13264 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:10:53.127  INFO 13264 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:53 CST 2019]; root of context hierarchy
+2019-01-04 11:10:55.414  INFO 6904 --- [main] ApplicationTest                          : Started ApplicationTest in 8.894 seconds (JVM running for 9.635)
+2019-01-04 11:10:55.492  INFO 6904 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:10:47 CST 2019]; root of context hierarchy
+2019-01-04 11:10:55.516  INFO 13264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:10:58.163  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:53 CST 2019]; root of context hierarchy
+2019-01-04 11:10:58.252  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:10:58.253  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:10:58.254  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:10:58.254  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:58.255  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:10:58.258  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:10:58.259  INFO 13264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:10:58.293  INFO 13264 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:58.294  INFO 13264 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:58.342  INFO 13264 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:10:59.511  INFO 13264 --- [main] ApplicationTest                          : Started ApplicationTest in 8.085 seconds (JVM running for 9.932)
+2019-01-04 11:10:59.571  INFO 13264 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:10:53 CST 2019]; root of context hierarchy
+2019-01-04 11:11:20.145  INFO 11332 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 11332 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:11:20.147  INFO 11332 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:11:20.609  INFO 11332 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@698122b2: startup date [Fri Jan 04 11:11:20 CST 2019]; root of context hierarchy
+2019-01-04 11:11:22.236  INFO 11332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:11:24.025  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@698122b2: startup date [Fri Jan 04 11:11:20 CST 2019]; root of context hierarchy
+2019-01-04 11:11:24.108  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:11:24.109  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:11:24.109  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:11:24.110  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:11:24.110  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:11:24.114  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:11:24.114  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:11:24.151  INFO 11332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:11:24.151  INFO 11332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:11:24.199  INFO 11332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:11:25.334  INFO 11332 --- [main] ApplicationTest                          : Started ApplicationTest in 6.009 seconds (JVM running for 7.091)
+2019-01-04 11:11:25.401  INFO 11332 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@698122b2: startup date [Fri Jan 04 11:11:20 CST 2019]; root of context hierarchy
+2019-01-04 11:12:41.798  INFO 13100 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 13100 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:12:41.798  INFO 13100 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:12:42.178  INFO 13100 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:12:42 CST 2019]; root of context hierarchy
+2019-01-04 11:12:43.552  INFO 13100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:12:46.586  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:12:42 CST 2019]; root of context hierarchy
+2019-01-04 11:12:46.880  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:12:46.893  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:12:46.893  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:12:46.895  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:12:46.896  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:12:46.899  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:12:46.900  INFO 13100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:12:46.990  INFO 13100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:46.990  INFO 13100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:47.183  INFO 13100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:47.432  INFO 7108 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 7108 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:12:47.433  INFO 7108 --- [main] ApplicationTest                          : No active profile set, falling back to default profiles: default
+2019-01-04 11:12:48.059  INFO 7108 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:12:48 CST 2019]; root of context hierarchy
+2019-01-04 11:12:49.706  INFO 13100 --- [main] ApplicationTest                          : Started ApplicationTest in 8.338 seconds (JVM running for 9.088)
+2019-01-04 11:12:49.784  INFO 13100 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@46cdf8bd: startup date [Fri Jan 04 11:12:42 CST 2019]; root of context hierarchy
+2019-01-04 11:12:50.054  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:12:52.759  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:12:48 CST 2019]; root of context hierarchy
+2019-01-04 11:12:52.847  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:12:52.848  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:12:52.848  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:12:52.849  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:12:52.850  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:12:52.853  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:12:52.853  INFO 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:12:52.897  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:52.897  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:52.954  INFO 7108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:12:54.067  INFO 7108 --- [main] ApplicationTest                          : Started ApplicationTest in 7.764 seconds (JVM running for 9.718)
+2019-01-04 11:12:54.125  INFO 7108 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@549949be: startup date [Fri Jan 04 11:12:48 CST 2019]; root of context hierarchy
+2019-01-04 11:15:30.860  INFO 10496 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 10496 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:15:30.863 DEBUG 10496 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-01-04 11:15:30.864  INFO 10496 --- [main] com.tcloudata.MainApplication            : The following profiles are active: dev,pro
+2019-01-04 11:15:31.129  INFO 10496 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d64e326: startup date [Fri Jan 04 11:15:31 CST 2019]; root of context hierarchy
+2019-01-04 11:15:31.859  INFO 10496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:15:33.280  INFO 10496 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2019-01-04 11:15:33.291  INFO 10496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-04 11:15:33.292  INFO 10496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-01-04 11:15:33.433  INFO 10496 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-04 11:15:33.433  INFO 10496 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2307 ms
+2019-01-04 11:15:33.816  INFO 10496 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-04 11:15:33.821  INFO 10496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-04 11:15:33.822  INFO 10496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-04 11:15:33.822  INFO 10496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-04 11:15:33.823  INFO 10496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-04 11:15:34.061  INFO 12488 --- [main] ApplicationTest                          : Starting ApplicationTest on 37J9A80GPN46D4M with PID 12488 (started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:15:34.062  INFO 12488 --- [main] ApplicationTest                          : The following profiles are active: dev,pro
+2019-01-04 11:15:34.495  INFO 12488 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4cc6fa2a: startup date [Fri Jan 04 11:15:34 CST 2019]; root of context hierarchy
+2019-01-04 11:15:35.671  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d64e326: startup date [Fri Jan 04 11:15:31 CST 2019]; root of context hierarchy
+2019-01-04 11:15:35.860  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:15:35.863  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:15:35.863  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:15:35.865  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:15:35.866  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:15:35.870  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:15:35.871  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:15:35.934  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:35.934  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:35.974  INFO 12488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:15:35.983  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:37.442  INFO 10496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-04 11:15:37.449  INFO 10496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-04 11:15:37.457  INFO 10496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-04 11:15:37.570  INFO 10496 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2019-01-04 11:15:37.577  INFO 10496 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 7.31 seconds (JVM running for 8.597)
+2019-01-04 11:15:38.256  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4cc6fa2a: startup date [Fri Jan 04 11:15:34 CST 2019]; root of context hierarchy
+2019-01-04 11:15:38.445  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:15:38.446  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:15:38.447  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:15:38.448  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:15:38.448  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:15:38.451  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:15:38.452  INFO 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:15:38.501  INFO 12488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:38.501  INFO 12488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:38.571  INFO 12488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:15:39.794  INFO 12488 --- [main] ApplicationTest                          : Started ApplicationTest in 6.471 seconds (JVM running for 7.783)
+2019-01-04 11:15:39.857  INFO 12488 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4cc6fa2a: startup date [Fri Jan 04 11:15:34 CST 2019]; root of context hierarchy
+2019-01-04 11:16:04.456  INFO 2144 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 2144 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:16:04.458 DEBUG 2144 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-01-04 11:16:04.459  INFO 2144 --- [main] com.tcloudata.MainApplication            : The following profiles are active: dev,pro
+2019-01-04 11:16:04.693  INFO 2144 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b40f651: startup date [Fri Jan 04 11:16:04 CST 2019]; root of context hierarchy
+2019-01-04 11:16:05.561  INFO 2144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:16:06.280  INFO 2144 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2019-01-04 11:16:06.289  INFO 2144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-04 11:16:06.290  INFO 2144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-01-04 11:16:06.393  INFO 2144 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-04 11:16:06.394  INFO 2144 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1704 ms
+2019-01-04 11:16:06.549  INFO 2144 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-04 11:16:06.553  INFO 2144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-04 11:16:06.554  INFO 2144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-04 11:16:06.554  INFO 2144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-04 11:16:06.554  INFO 2144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-04 11:16:07.205  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b40f651: startup date [Fri Jan 04 11:16:04 CST 2019]; root of context hierarchy
+2019-01-04 11:16:07.266  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:16:07.267  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:16:07.267  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:16:07.269  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:16:07.270  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:16:07.272  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:16:07.273  INFO 2144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:16:07.303  INFO 2144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:16:07.304  INFO 2144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:16:07.342  INFO 2144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:16:08.208  INFO 2144 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-04 11:16:08.209  INFO 2144 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-04 11:16:08.215  INFO 2144 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-04 11:16:08.268  INFO 2144 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2019-01-04 11:16:08.273  INFO 2144 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 4.352 seconds (JVM running for 5.608)
+2019-01-04 11:46:14.714  INFO 7136 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 7136 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:46:14.716 DEBUG 7136 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-01-04 11:46:14.716  INFO 7136 --- [main] com.tcloudata.MainApplication            : The following profiles are active: dev,pro
+2019-01-04 11:46:15.071  INFO 7136 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b40f651: startup date [Fri Jan 04 11:46:15 CST 2019]; root of context hierarchy
+2019-01-04 11:46:15.956  INFO 7136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:46:16.788  INFO 7136 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2019-01-04 11:46:16.796  INFO 7136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-04 11:46:16.797  INFO 7136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-01-04 11:46:16.886  INFO 7136 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-04 11:46:16.886  INFO 7136 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1818 ms
+2019-01-04 11:46:17.042  INFO 7136 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-04 11:46:17.046  INFO 7136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-04 11:46:17.047  INFO 7136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-04 11:46:17.047  INFO 7136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-04 11:46:17.047  INFO 7136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-04 11:46:17.685  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b40f651: startup date [Fri Jan 04 11:46:15 CST 2019]; root of context hierarchy
+2019-01-04 11:46:17.746  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.tcloudata.controller.HelloController.hello() throws java.lang.Exception
+2019-01-04 11:46:17.750  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:46:17.750  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:46:17.750  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:46:17.752  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:46:17.752  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:46:17.754  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:46:17.755  INFO 7136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:46:17.787  INFO 7136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:46:17.787  INFO 7136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:46:17.830  INFO 7136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:46:18.709  INFO 7136 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-04 11:46:18.711  INFO 7136 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-04 11:46:18.716  INFO 7136 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-04 11:46:18.767  INFO 7136 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2019-01-04 11:46:18.771  INFO 7136 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 4.695 seconds (JVM running for 5.966)
+2019-01-04 11:46:31.653  INFO 7136 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-04 11:46:31.654  INFO 7136 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-04 11:46:31.678  INFO 7136 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2019-01-04 11:46:38.927 ERROR 7136 --- [http-nio-8089-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.Exception: error] with root cause
+
+java.lang.Exception: error
+	at com.tcloudata.controller.HelloController.hello(HelloController.java:18) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-01-04 11:55:46.833  INFO 12368 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 12368 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:55:46.844 DEBUG 12368 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-01-04 11:55:46.845  INFO 12368 --- [main] com.tcloudata.MainApplication            : The following profiles are active: dev,pro
+2019-01-04 11:55:47.105  INFO 12368 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42b02722: startup date [Fri Jan 04 11:55:47 CST 2019]; root of context hierarchy
+2019-01-04 11:55:47.888  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:55:48.629  INFO 12368 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2019-01-04 11:55:48.639  INFO 12368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-04 11:55:48.641  INFO 12368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-01-04 11:55:48.743  INFO 12368 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-04 11:55:48.743  INFO 12368 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1641 ms
+2019-01-04 11:55:48.903  INFO 12368 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-04 11:55:48.908  INFO 12368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-04 11:55:48.909  INFO 12368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-04 11:55:48.909  INFO 12368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-04 11:55:48.909  INFO 12368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-04 11:55:49.559  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42b02722: startup date [Fri Jan 04 11:55:47 CST 2019]; root of context hierarchy
+2019-01-04 11:55:49.618  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.tcloudata.controller.HelloController.hello() throws java.lang.Exception
+2019-01-04 11:55:49.623  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:55:49.623  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:55:49.623  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:55:49.626  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:55:49.626  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:55:49.628  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:55:49.629  INFO 12368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:55:49.659  INFO 12368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:55:49.660  INFO 12368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:55:49.701  INFO 12368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:55:50.556  INFO 12368 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-04 11:55:50.557  INFO 12368 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-04 11:55:50.562  INFO 12368 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-04 11:55:50.615  INFO 12368 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2019-01-04 11:55:50.619  INFO 12368 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 4.387 seconds (JVM running for 5.804)
+2019-01-04 11:55:54.589  INFO 12368 --- [http-nio-8089-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-04 11:55:54.590  INFO 12368 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-04 11:55:54.614  INFO 12368 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-01-04 11:55:54.888 ERROR 12368 --- [http-nio-8089-exec-2] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8089-exec-2] Exception processing template "error": Exception evaluating SpringEL expression: "exception.message" (error)
+2019-01-04 11:55:54.895 ERROR 12368 --- [http-nio-8089-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'message' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:139) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariable(VariableExpression.java:154) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:103) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:133) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:120) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.processor.attr.AbstractStandardTextChildModifierAttrProcessor.getText(AbstractStandardTextChildModifierAttrProcessor.java:68) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractTextChildModifierAttrProcessor.getModifiedChildren(AbstractTextChildModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractChildrenModifierAttrProcessor.processAttribute(AbstractChildrenModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractAttrProcessor.doProcess(AbstractAttrProcessor.java:87) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.AbstractProcessor.process(AbstractProcessor.java:212) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.applyNextProcessor(Node.java:1017) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:972) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Document.process(Document.java:93) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1155) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-01-04 11:55:54.898 ERROR 12368 --- [http-nio-8089-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "exception.message" (error)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "exception.message" (error)
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:161) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariable(VariableExpression.java:154) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:103) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:133) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:120) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.processor.attr.AbstractStandardTextChildModifierAttrProcessor.getText(AbstractStandardTextChildModifierAttrProcessor.java:68) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractTextChildModifierAttrProcessor.getModifiedChildren(AbstractTextChildModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractChildrenModifierAttrProcessor.processAttribute(AbstractChildrenModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractAttrProcessor.doProcess(AbstractAttrProcessor.java:87) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.AbstractProcessor.process(AbstractProcessor.java:212) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.applyNextProcessor(Node.java:1017) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:972) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Document.process(Document.java:93) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1155) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'message' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:139) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 57 common frames omitted
+
+2019-01-04 11:56:50.850  INFO 11404 --- [main] com.tcloudata.MainApplication            : Starting MainApplication on 37J9A80GPN46D4M with PID 11404 (D:\ly\lyworkpace\bootstarptable\target\classes started by Administrator in D:\ly\lyworkpace\bootstarptable)
+2019-01-04 11:56:50.853 DEBUG 11404 --- [main] com.tcloudata.MainApplication            : Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-01-04 11:56:50.853  INFO 11404 --- [main] com.tcloudata.MainApplication            : The following profiles are active: dev,pro
+2019-01-04 11:56:51.091  INFO 11404 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d64e326: startup date [Fri Jan 04 11:56:51 CST 2019]; root of context hierarchy
+2019-01-04 11:56:51.896  INFO 11404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-04 11:56:52.609  INFO 11404 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2019-01-04 11:56:52.617  INFO 11404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-04 11:56:52.618  INFO 11404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-01-04 11:56:52.722  INFO 11404 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-04 11:56:52.722  INFO 11404 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1634 ms
+2019-01-04 11:56:52.878  INFO 11404 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-04 11:56:52.882  INFO 11404 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-04 11:56:52.883  INFO 11404 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-04 11:56:52.883  INFO 11404 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-04 11:56:52.883  INFO 11404 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-04 11:56:53.563  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d64e326: startup date [Fri Jan 04 11:56:51 CST 2019]; root of context hierarchy
+2019-01-04 11:56:53.621  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.tcloudata.controller.HelloController.hello() throws java.lang.Exception
+2019-01-04 11:56:53.624  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || ],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.index()
+2019-01-04 11:56:53.625  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.list()
+2019-01-04 11:56:53.625  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/table],methods=[GET]}" onto public java.lang.String com.tcloudata.controller.IndexController.table()
+2019-01-04 11:56:53.627  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.studentList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:56:53.628  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods/list],methods=[GET]}" onto public com.tcloudata.common.PageUtils com.tcloudata.controller.IndexController.goodList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-04 11:56:53.630  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-04 11:56:53.630  INFO 11404 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-04 11:56:53.660  INFO 11404 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:56:53.660  INFO 11404 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:56:53.679  INFO 11404 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2019-01-04 11:56:53.703  INFO 11404 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-04 11:56:54.549  INFO 11404 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-04 11:56:54.551  INFO 11404 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-04 11:56:54.557  INFO 11404 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-04 11:56:54.610  INFO 11404 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2019-01-04 11:56:54.615  INFO 11404 --- [main] com.tcloudata.MainApplication            : Started MainApplication in 4.397 seconds (JVM running for 5.636)
+2019-01-04 11:56:58.216  INFO 11404 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-04 11:56:58.216  INFO 11404 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-04 11:56:58.239  INFO 11404 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-01-04 11:56:58.511 ERROR 11404 --- [http-nio-8089-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8089-exec-1] Exception processing template "error": Exception evaluating SpringEL expression: "exception.message" (error)
+2019-01-04 11:56:58.516 ERROR 11404 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'message' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:139) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariable(VariableExpression.java:154) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:103) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:133) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:120) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.processor.attr.AbstractStandardTextChildModifierAttrProcessor.getText(AbstractStandardTextChildModifierAttrProcessor.java:68) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractTextChildModifierAttrProcessor.getModifiedChildren(AbstractTextChildModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractChildrenModifierAttrProcessor.processAttribute(AbstractChildrenModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractAttrProcessor.doProcess(AbstractAttrProcessor.java:87) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.AbstractProcessor.process(AbstractProcessor.java:212) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.applyNextProcessor(Node.java:1017) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:972) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Document.process(Document.java:93) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1155) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-01-04 11:56:58.518 ERROR 11404 --- [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "exception.message" (error)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "exception.message" (error)
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:161) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariable(VariableExpression.java:154) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:103) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:133) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:120) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.standard.processor.attr.AbstractStandardTextChildModifierAttrProcessor.getText(AbstractStandardTextChildModifierAttrProcessor.java:68) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractTextChildModifierAttrProcessor.getModifiedChildren(AbstractTextChildModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractChildrenModifierAttrProcessor.processAttribute(AbstractChildrenModifierAttrProcessor.java:59) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.attr.AbstractAttrProcessor.doProcess(AbstractAttrProcessor.java:87) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.processor.AbstractProcessor.process(AbstractProcessor.java:212) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.applyNextProcessor(Node.java:1017) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:972) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Node.processNode(Node.java:990) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.dom.Document.process(Document.java:93) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1155) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[thymeleaf-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'message' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:139) ~[thymeleaf-spring4-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 57 common frames omitted
+

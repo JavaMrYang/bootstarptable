@@ -1,0 +1,52 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "name": "application-dev.yml",
+      "type": "com.tcloudata.properties.JedisProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "name": "application-dev.yml.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "defaultValue": 0,
+      "name": "application-dev.yml.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "defaultValue": 0,
+      "name": "application-dev.yml.max-total",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "defaultValue": 0,
+      "name": "application-dev.yml.max-wait-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "name": "application-dev.yml.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "defaultValue": 0,
+      "name": "application-dev.yml.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tcloudata.properties.JedisProperties",
+      "defaultValue": 0,
+      "name": "application-dev.yml.time-out",
+      "type": "java.lang.Integer"
+    }
+  ]
+}
